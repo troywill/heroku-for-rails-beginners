@@ -1,52 +1,60 @@
+* Rails 4 to Heroku Step by Step
+  1. [-] [[https://devcenter.heroku.com/articles/rails3#write-your-app][Write the application]]
+     1. [X] Change into the application directory
+     2. [X] Use PostgreSQL
+        #+BEGIN_SRC ruby
+        # Specify PostgeSQL in Gemfile
+        gem 'pg'
+        #+END_SRC
+     3. [ ] Gemfile ( https://devcenter.heroku.com/articles/rails4 )
+        #+BEGIN_SRC ruby
+          gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+          gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+        #+END_SRC
+     4. [X] Re-install dependencies to generate a new Gemfile.lock
+        #+BEGIN_SRC sh
+          bundle install
+        #+END_SRC
+  2. [X] Store the application in Git
+     #+BEGIN_SRC sh
+       git init
+       git add .
+       git commit -m "init"
+     #+END_SRC
+  3. [2/2] Deploy the application to Heroku
+     1. [X] Create the application on Heroku
+        #+BEGIN_SRC heroku
+          # http://murmuring-bastion-5947.herokuapp.com/ | git@heroku.com:murmuring-bastion-5947.git
+          heroku create
+        #+END_SRC
+     2. [X] Deploy the code
+        #+BEGIN_SRC sh
+          git push heroku master
+        #+END_SRC
+  4. [ ] Visit the application
+  5. [ ] View the logs
+* [2/2] https://devcenter.heroku.com/articles/custom-domains
+  1. [X] 
+     #+BEGIN_SRC sh
+       heroku domains:add www.example.com
+       # Adding www.example.com to example... done
+     #+END_SRC
+  2. [X] CNAME (Alias)
+     | HOST NAME  | IP ADDRESS/URL                   | RECORD TYPE   |
+     |------------+----------------------------------+---------------|
+     | weightloss | warm-citadel-7982.herokuapp.com. | CNAME (Alias) |
+  
+* Reference
+** How Heroku Works
+* Learning
+* Common Tasks
+** Deploying with Git
+** Changelog
 * [[https://devcenter.heroku.com/][Documentation]] ( Heroku Dev Center )
 ** [[https://devcenter.heroku.com/articles/quickstart][Getting started]]
    1. [ ] [[https://devcenter.heroku.com/articles/quickstart#step-1-sign-up][Sign up]]
    2. [ ] [[https://devcenter.heroku.com/articles/quickstart#step-2-install-the-heroku-toolbelt][Install the Heroku Toolbelt]]
    3. [ ] [[https://devcenter.heroku.com/articles/quickstart#step-3-login][Login]]
    4. [ ] [[https://devcenter.heroku.com/articles/quickstart#step-4-deploy-an-application][Deploy an application]]
-** Rails 4
-   1. [-] [[https://devcenter.heroku.com/articles/rails3#write-your-app][Write the application]]
-      1. [X] Change into the application directory
-      2. [X] Use PostgreSQL
-         #+BEGIN_SRC ruby
-         # Specify PostgeSQL in Gemfile
-         gem 'pg'
-         #+END_SRC
-      3. [ ] Gemfile ( https://devcenter.heroku.com/articles/rails4 )
-         #+BEGIN_SRC ruby
-           gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-           gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
-         #+END_SRC
-      4. [X] Re-install dependencies to generate a new Gemfile.lock
-         #+BEGIN_SRC sh
-           bundle install
-         #+END_SRC
-   2. [X] Store the application in Git
-      #+BEGIN_SRC sh
-        git init
-        git add .
-        git commit -m "init"
-      #+END_SRC
-   3. [2/2] Deploy the application to Heroku
-      1. [X] Create the application on Heroku
-         #+BEGIN_SRC heroku
-           # http://murmuring-bastion-5947.herokuapp.com/ | git@heroku.com:murmuring-bastion-5947.git
-           heroku create
-         #+END_SRC
-      2. [X] Deploy the code
-         #+BEGIN_SRC sh
-           git push heroku master
-         #+END_SRC
-   4. [ ] Visit the application
-   5. [ ] View the logs
-*** Webserver
-*** 
-** Ruby
-** Reference
-*** How Heroku Works
-** Learning
-** Common Tasks
-*** Deploying with Git
-** Changelog
 * Apps
 * Help & Support
