@@ -37,13 +37,13 @@
         #+END_SRC
   4. [ ] Visit the application
   5. [ ] View the logs
-* [2/2] https://devcenter.heroku.com/articles/custom-domains
-  1. [X] 
+* [0/2] https://devcenter.heroku.com/articles/custom-domains
+  1. [ ] 
      #+BEGIN_SRC sh
        heroku domains:add www.example.com
        # Adding www.example.com to example... done
      #+END_SRC
-  2. [X] CNAME (Alias)
+  2. [ ] CNAME (Alias)
      | HOST NAME  | IP ADDRESS/URL                   | RECORD TYPE   |
      |------------+----------------------------------+---------------|
      | weightloss | warm-citadel-7982.herokuapp.com. | CNAME (Alias) |

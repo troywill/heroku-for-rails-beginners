@@ -3,7 +3,7 @@
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#sec-1">1. Rails 4 to Heroku Step by Step</a></li>
-<li><a href="#sec-2">2. <code>[2/2]</code> </a></li>
+<li><a href="#sec-2">2. <code>[0/2]</code> </a></li>
 <li><a href="#sec-3">3. Reference</a>
 <ul>
 <li><a href="#sec-3-1">3.1. How Heroku Works</a></li>
@@ -71,12 +71,12 @@
 
 5.  [ ] View the logs
 
-# <code>[2/2]</code> <https://devcenter.heroku.com/articles/custom-domains>
+# <code>[0/2]</code> <https://devcenter.heroku.com/articles/custom-domains>
 
-1.  [X] heroku domains:add www.example.com
+1.  [ ] heroku domains:add www.example.com
         # Adding www.example.com to example... done
 
-2.  [X] CNAME (Alias)
+2.  [ ] CNAME (Alias)
     
     <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
     
