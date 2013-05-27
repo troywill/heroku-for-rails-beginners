@@ -1,5 +1,9 @@
 * Rails 4 to Heroku Step by Step
   1. [-] [[https://devcenter.heroku.com/articles/rails3#write-your-app][Write the application]]
+     1. [ ] Create a new Rails application using postgresql
+	    #+begin_src sh
+	      rails new app_name --database postgresql
+	    #+end_src
      1. [X] Change into the application directory
      2. [X] Use PostgreSQL
         #+BEGIN_SRC ruby
