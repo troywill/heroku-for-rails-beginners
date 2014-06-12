@@ -1,11 +1,11 @@
 * Rails 4 to Heroku Step by Step
-  1. [ ] [[https://devcenter.heroku.com/articles/rails3#write-your-app][Write the application]]
-     1. [ ] Create a new Rails application using postgresql
+  1. [-] [[https://devcenter.heroku.com/articles/rails3#write-your-app][Write the application]]
+     1. [X] Create a new Rails application using postgresql
 	    #+begin_src sh
 	      rails new app_name --database postgresql
 	    #+end_src
-     2. [ ] Change into the application directory
-     3. [ ] Use PostgreSQL
+     2. [X] Change into the application directory
+     3. [X] Use PostgreSQL
         #+BEGIN_SRC ruby
         # Specify PostgeSQL in Gemfile
         gem 'pg'
@@ -19,10 +19,10 @@
         #+BEGIN_SRC sh
           bundle install
         #+END_SRC
-  2. [ ] Store the application in Git
+  2. [X] Store the application in Git
      #+BEGIN_SRC sh
        git init
-       git add .
+       git adpd .
        git commit -m "init"
      #+END_SRC
   3. [0/2] Deploy the application to Heroku
@@ -31,6 +31,10 @@
           # http://murmuring-bastion-5947.herokuapp.com/ | git@heroku.com:murmuring-bastion-5947.git
           heroku create
         #+END_SRC
+	Creating mighty-badlands-8255... done, stack is cedar
+	http://mighty-badlands-8255.herokuapp.com/ | git@heroku.com:mighty-badlands-8255.git
+	Git remote heroku added
+	
      2. [ ] Deploy the code
         #+BEGIN_SRC sh
           git push heroku master
