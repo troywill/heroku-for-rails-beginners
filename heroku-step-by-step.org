@@ -75,7 +75,6 @@
      #+BEGIN_SRC sh
        git commit -m "init"
      #+END_SRC
-     
   9. [/] Deploy the application to Heroku
      1. [ ] Create the application on Heroku
         #+BEGIN_SRC sh
@@ -91,12 +90,6 @@
           git push heroku master >> log.heroku
         #+END_SRC
 
-        #+RESULTS:
-  10. [ ] Visit the application
-  11. [ ] View the logs
-      #+BEGIN_SRC sh
-	heroku logs
-      #+END_SRC
 * [[https://devcenter.heroku.com/]]
 ** [[https://devcenter.heroku.com/articles/quickstart][Getting started]]
    1. [ ] [[https://devcenter.heroku.com/articles/quickstart#step-1-sign-up][Sign up]]
