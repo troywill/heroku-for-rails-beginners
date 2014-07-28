@@ -4,10 +4,13 @@
   2. [ ] Skim https://devcenter.heroku.com/articles/rails4
   3. [ ] [[https://devcenter.heroku.com/articles/getting-started-with-rails4#write-your-app][Write the application]]
      1. [ ] Create a new Rails application using postgresql
-	    #+begin_src sh :tangle bin/create-rails-app.sh
+	    #+begin_src sh :tangle bin/create-rails-app.sh :shebang #/bin/sh
 	      rails new app_name --database postgresql
 	    #+end_src
      2. [ ] Change into the application directory
+	#+BEGIN_SRC sh
+	  cd app_name
+	#+END_SRC
      3. [ ] copy this org file
 	#+BEGIN_SRC sh
 	  cp ../heroku-step-by-step.org .
@@ -26,7 +29,7 @@
           bundle install
         #+END_SRC
   4. [ ] Set up the Postgresql database in file:config/database.yml
-     1. [ ] template: :template0
+     1. [ ] template: template0
 	#+BEGIN_SRC conf
           default: &default
             adapter: postgresql
@@ -34,9 +37,9 @@
             # For details on connection pooling, see rails configuration guide
             # http://guides.rubyonrails.org/configuring.html#database-pooling
             pool: 5
-            template: :template0
+            template: template0
 	#+END_SRC
-     2. [ ] rake db:create
+     2. [ ] rake db:create ( # may need to rake db:drop )
   5. [ ] Create a “home” controller and “home/index”, "home/about", "home/contact" pages
      #+BEGIN_SRC sh :tangle bin/generate-home-controller.sh :shebang #!/bin/sh
        rails generate controller home index about contact --skip-stylesheets
